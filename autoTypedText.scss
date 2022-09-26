@@ -1,0 +1,38 @@
+$bodycolor: #1d1d1d;
+$elementTypeColor: #7a7a7a;
+$highlightedText: aqua;
+$mainFont: 'Fira Sans', sans-serif;
+
+body{
+    background: $bodycolor;
+    color: red;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#automatedText {
+    transition: 0.5s;
+    color: $highlightedText;
+    font-family: 'Tinos', serif;
+    font-size: 100px;
+}
+
+.elementType, #automatedText {
+    display: inline;
+    text-shadow: 5px 5px 5px 10px black;
+}
+
+.elementType {
+    color: $elementTypeColor;
+    font-family: 'Dancing Script', cursive;
+}
+
+#automatedText:hover{
+    opacity: 0.2;
+}
+
+#automatedTextContainer {
+    text-align: center;
+}
