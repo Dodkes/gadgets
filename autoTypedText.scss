@@ -1,7 +1,8 @@
 $bodycolor: #1d1d1d;
 $elementTypeColor: #7a7a7a;
 $highlightedText: aqua;
-$mainFont: 'Fira Sans', sans-serif;
+$purple: #ff99ff;
+$mainFont: 'Tinos', serif;
 
 body{
     background: $bodycolor;
@@ -15,13 +16,12 @@ body{
 #automatedText {
     transition: 0.5s;
     color: $highlightedText;
-    font-family: 'Tinos', serif;
-    font-size: 100px;
+    font-family: $mainFont;
+    font-size: 5vw;
 }
 
 .elementType, #automatedText {
     display: inline;
-    text-shadow: 5px 5px 5px 10px black;
 }
 
 .elementType {
@@ -29,10 +29,34 @@ body{
     font-family: 'Dancing Script', cursive;
 }
 
-#automatedText:hover{
-    opacity: 0.2;
-}
-
 #automatedTextContainer {
     text-align: center;
+}
+
+p.autoTypingParagraph {
+    display: inline;
+    animation-name: pulsing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#backgroundTag {
+    color: #292929;
+    font-family: 'Dancing Script', cursive;
+    font-size: 44vw;
+    text-align: center;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+@keyframes pulsing {
+    from {
+        color: $highlightedText;
+        font-size: 4.9vw;
+    }
+    to {color: $purple}
 }
