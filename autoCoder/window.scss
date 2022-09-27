@@ -1,0 +1,158 @@
+$border: 1px solid black;
+$windowRadius: 10px;
+$windowShadow: 2px 2px 10px 1px black;
+$inputWindowColor: rgb(28, 27, 27);
+$buttonsMargin: 5px 0 0 5px;
+$elementColor: #4d79ff;
+$attributeColor: #99ccff;
+$attributeValueColor: #ff9933;
+$documentColor: #E0FFFF;
+$selectorColor: #FFFACD;
+$goldColor: #FFD700;
+$tsTypeColor: #00FA9A;
+// $navbarColor: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 35%, rgba(51,57,59,1) 100%);
+$navbarColor: #363637;
+$navbarOutputColor: aliceblue;
+
+*   {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#window-navbar {
+    top: 0;
+    left: 0;
+    background: $navbarColor;
+    border-radius: $windowRadius $windowRadius 0 0;
+}
+
+#window-navbar-output{
+    top: 0;
+    left: 0;
+    background: $navbarOutputColor;
+    border-radius: $windowRadius $windowRadius 0 0;
+    border-bottom: 1px solid grey;
+}
+
+ul {
+    margin-left: 5px;
+}
+
+body {
+    background-color: grey;
+}
+
+#main-window {
+    width: 50%;
+    color: white;
+    background-color: $inputWindowColor;
+    border-radius: $windowRadius $windowRadius 0 0;
+}
+
+
+#main-window-output {
+    width: 40%;
+    color: white;
+    background-color:white;
+}
+
+
+#main-window, #main-window-output {
+    border-radius: $windowRadius;
+    box-shadow: $windowShadow;
+    border: $border;
+    display: inline-block;
+    margin: 1%;
+}
+
+#fullscreenButton, #minimiseButton, #closeButton{
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: $buttonsMargin;
+}
+
+#closeButton{
+    background-color: #ff4d4d;
+}
+
+#minimiseButton{
+    background-color: #ffcc66;
+}
+
+#fullscreenButton{
+    background-color: #66ff66;
+}
+
+.documentColor{
+    color: $documentColor;
+}
+
+.gold{
+    color: $goldColor;
+}
+
+.ts-type{
+    color: $tsTypeColor;
+}
+
+.selectorColor {
+    color: $selectorColor;
+}
+
+#textContent, #textContentOutput {
+    margin: 5px;
+}
+
+#textContent, #typescript {
+    height: 390px;
+}
+
+#cursor {
+    animation-name: blinking;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blinking {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.element {
+    color: $elementColor;
+}
+
+.attribute {
+    color: $attributeColor;
+}
+
+.marginCode {
+    margin-left: 30px;
+}
+
+.attributeValue{
+    color: $attributeValueColor;
+}
+
+#textContentOutput {
+    border-radius: $windowRadius;
+    color: black;
+    height: 200px;
+}
+
+#autoTyper, #cursor, #div-element-as-text {
+    display: inline;
+}
+
+#typescript {
+    display: none;
+}
+
+#backElement, #div-element-as-text {
+    display: none;
+}
