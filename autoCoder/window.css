@@ -1,0 +1,162 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#window-navbar {
+  top: 0;
+  left: 0;
+  background: #363637;
+  border-radius: 10px 10px 0 0;
+}
+
+#window-navbar-output {
+  top: 0;
+  left: 0;
+  background: aliceblue;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid grey;
+}
+
+ul {
+  margin-left: 5px;
+}
+
+body {
+  background-color: grey;
+}
+
+#main-window {
+  width: 40%;
+  color: white;
+  background-color: #1c1b1b;
+  border-radius: 10px 10px 0 0;
+}
+
+#main-window-output {
+  width: 40%;
+  color: white;
+  background-color: white;
+  position: fixed;
+}
+
+#main-window, #main-window-output {
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 10px 1px black;
+          box-shadow: 2px 2px 10px 1px black;
+  border: 1px solid black;
+  margin: 1%;
+  display: inline-block;
+}
+
+#fullscreenButton, #minimiseButton, #closeButton {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px 0 0 5px;
+}
+
+#closeButton {
+  background-color: #ff4d4d;
+}
+
+#minimiseButton {
+  background-color: #ffcc66;
+}
+
+#fullscreenButton {
+  background-color: #66ff66;
+}
+
+.documentColor {
+  color: #E0FFFF;
+}
+
+.gold {
+  color: #FFD700;
+}
+
+.ts-type {
+  color: #00FA9A;
+}
+
+.selectorColor {
+  color: #FFFACD;
+}
+
+#textContent, #textContentOutput {
+  margin: 5px;
+}
+
+#textContent, #typescript {
+  height: 320px;
+}
+
+#cursor {
+  -webkit-animation-name: blinking;
+          animation-name: blinking;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes blinking {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blinking {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.element {
+  color: #4d79ff;
+}
+
+.attribute {
+  color: #99ccff;
+}
+
+.marginCode {
+  margin-left: 30px;
+}
+
+.attributeValue {
+  color: #ff9933;
+}
+
+#textContentOutput {
+  border-radius: 10px;
+  color: black;
+  height: 200px;
+}
+
+#autoTyper, #cursor, #div-element-as-text, #typescriptText {
+  display: inline;
+}
+
+#typescript {
+  display: none;
+  margin: 5px;
+}
+
+#backElement, #div-element-as-text, .dot, .textContent {
+  display: none;
+}
+/*# sourceMappingURL=window.css.map */

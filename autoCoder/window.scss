@@ -45,7 +45,7 @@ body {
 }
 
 #main-window {
-    width: 50%;
+    width: 40%;
     color: white;
     background-color: $inputWindowColor;
     border-radius: $windowRadius $windowRadius 0 0;
@@ -56,6 +56,7 @@ body {
     width: 40%;
     color: white;
     background-color:white;
+    position: fixed;
 }
 
 
@@ -63,8 +64,8 @@ body {
     border-radius: $windowRadius;
     box-shadow: $windowShadow;
     border: $border;
-    display: inline-block;
     margin: 1%;
+    display: inline-block;
 }
 
 #fullscreenButton, #minimiseButton, #closeButton{
@@ -108,7 +109,7 @@ body {
 }
 
 #textContent, #typescript {
-    height: 390px;
+    height: 320px;
 }
 
 #cursor {
@@ -145,14 +146,15 @@ body {
     height: 200px;
 }
 
-#autoTyper, #cursor, #div-element-as-text {
+#autoTyper, #cursor, #div-element-as-text, #typescriptText {
     display: inline;
 }
 
 #typescript {
     display: none;
+    margin: 5px;
 }
 
-#backElement, #div-element-as-text {
+#backElement, #div-element-as-text, .dot, .textContent {
     display: none;
 }
