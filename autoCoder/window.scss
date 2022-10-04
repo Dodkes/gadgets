@@ -10,6 +10,7 @@ $documentColor: #E0FFFF;
 $selectorColor: #FFFACD;
 $goldColor: #FFD700;
 $tsTypeColor: #00FA9A;
+$numberColor: #d9ffb3;
 // $navbarColor: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 35%, rgba(51,57,59,1) 100%);
 $navbarColor: #363637;
 $navbarOutputColor: aliceblue;
@@ -26,6 +27,10 @@ $navbarOutputColor: aliceblue;
     left: 0;
     background: $navbarColor;
     border-radius: $windowRadius $windowRadius 0 0;
+}
+
+.space {
+    margin-left: 25px;
 }
 
 #window-navbar-output{
@@ -51,14 +56,12 @@ body {
     border-radius: $windowRadius $windowRadius 0 0;
 }
 
-
 #main-window-output {
     width: 40%;
     color: white;
     background-color:white;
     position: fixed;
 }
-
 
 #main-window, #main-window-output {
     border-radius: $windowRadius;
@@ -68,7 +71,7 @@ body {
     display: inline-block;
 }
 
-#fullscreenButton, #minimiseButton, #closeButton{
+#fullscreenButton, #minimiseButton, #closeButton {
     height: 12px;
     width: 12px;
     border-radius: 50%;
@@ -102,6 +105,10 @@ body {
 
 .selectorColor {
     color: $selectorColor;
+}
+
+.numberValue {
+    color: $numberColor;
 }
 
 #textContent, #textContentOutput {
@@ -150,11 +157,11 @@ body {
     display: inline;
 }
 
-#typescript {
+#typescript, #scss {
     display: none;
     margin: 5px;
 }
 
-#backElement, #div-element-as-text, .dot, .textContent {
+#backElement, .colon, #div-element-as-text, .dot, .textContent, .equal-element, .typescriptTextContent, .scss-autotype-2, .comma, #scss-autotype-1 {
     display: none;
 }

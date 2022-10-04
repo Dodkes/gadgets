@@ -35,22 +35,49 @@
                 &lt;<span class="element">body</span>&gt; <br>
 
                 <div id="typingContainer">
-                    <div id="autoTyper"></div><div id="div-element-as-text">&lt;<span class="element">h1 <span class="attribute">id</span></span>=<span class="attributeValue">"heading"</span>&gt;<span id="backElement"><div id="cursor">|</div>&lt;<span class="element">h1</span>/&gt;</span></div>
+                    <div id="autoTyper">
+                    </div><div id="cursor" class="cursor-1">|</div>
+                    <div id="div-element-as-text">&lt;<span class="element">h1 <span class="attribute">id</span></span>=<span class="attributeValue">"heading"</span>&gt;<span id="backElement"><div id="cursor">|</div>&lt;<span class="element">h1</span>/&gt;</span></div>
                 </div>
+
                 &lt;<span class="element">body</span>/&gt; <br>
                 &lt;<span class="element">html</span>/&gt;
             </div>
+
+
+
+
             <!-- TYPESCRIPT as TEXT -->
             <div id="typescript">
                     <span class="element">const <span class="attribute">heading</span></span> = <span class="documentColor">document</span>.<span class="selectorColor">querySelector</span><span class="gold">&lt;</span><span class="ts-type">HTMLHeadElement</span><span class="gold">&gt;</span><span class="gold">(</span><span class="attributeValue">'#heading'</span><span class="gold">)</span> <br>
-                    <div id="typescriptText" class="attribute"></div><div class="dot">.</div><div class="textContent element"></div><div id="cursor">|</div>
+                    <div id="typescriptText" class="attribute"></div><div class="dot">.</div><div class="textContent attribute"></div><div class="equal-element"> = </div><div class="typescriptTextContent attributeValue"></div><div id="cursor">|</div>
             </div>
 
-    
-        </div>
-    
 
-        
+                  <!-- SCSS as TEXT -->
+            <div id="scss">
+                <span class="attribute">$heading-color</span>: <span class="attributeValue">#000000</span>; <br>
+                <span class="attribute">$myColor</span>: <span class="attributeValue">#9fdfbf</span>; <br> <br>
+
+                <span class="element">*</span> <span class="gold">{</span> <br>
+                    <span class="attribute space">box-sizing</span>: <span class="attributeValue">border-box</span>; <br>
+                    <span class="attribute space">margin</span>: <span class="numberValue">0</span>; <br>
+                    <span class="attribute space">padding</span>: <span class="numberValue">0</span>; <br>
+                    <span class="attribute space">font-family</span>: <span class="attributeValue">'Courier New', Courier, monospace</span>; <br>
+                <span class="gold">}</span> <br> <br>
+                <span class="gold">body</span> <span class="gold">{</span> <br>
+                    <!-- SCSS AUTOTYPING -->
+                <div id="scss-autotype-1" class="space attribute"></div><div class="colon">:</div><div id="scss-autotype-2" class="attribute"></div><div class="comma">;</div><div id="cursor">|</div> <br>
+                <span class="gold">}</span> <br> <br>
+
+                <span class="gold">#heading</span> <span class="gold">{</span> <br>
+                    <span class="attribute space">color</span>: <span class="attribute">$heading-color</span>; <br>
+                <span class="gold">}</span>
+            </div>
+        </div>
+
+
+        <!-- OUTPUT WINDOW -->
         <div id="main-window-output">
             <div id="window-navbar-output">
                 <ul id="buttons">
@@ -60,7 +87,7 @@
                 </ul>
             </div>
             <div id="textContentOutput">
-                <h1 id="heading">404</h1>
+                <h1 id="output-heading">404</h1>
             </div>
 
 
