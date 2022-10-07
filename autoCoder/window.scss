@@ -115,7 +115,7 @@ body {
     margin: 5px;
 }
 
-#textContent, #typescript {
+#textContent, #typescript, #scss {
     height: 320px;
 }
 
@@ -162,6 +162,6 @@ body {
     margin: 5px;
 }
 
-#backElement, .colon, #div-element-as-text, .dot, .textContent, .equal-element, .typescriptTextContent, .scss-autotype-2, .comma, #scss-autotype-1 {
+#backElement, .colon, #div-element-as-text, .dot, .textContent, .equal-element, .typescriptTextContent, #scss-autotype-2, .comma, #scss-autotype-1 {
     display: none;
 }

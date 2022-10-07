@@ -19,8 +19,9 @@ const scssElementTwo = document.querySelector<HTMLDivElement>('#scss-autotype-2'
 
 const colon = document.querySelector<HTMLDivElement>('.colon')
 const comma = document.querySelector<HTMLDivElement>('.comma')
-//Heading element
-const outputHeading = document.querySelector('#output-heading')
+//OUTPUT elements
+const outputHeading = document.querySelector<HTMLDivElement>('#output-heading')
+const outputContainer = document.querySelector<HTMLDivElement>('#main-window-output')
 
 const typingSpeed: number = 100
 const transitionSpeed: number = 500
@@ -55,7 +56,7 @@ function typingFunction () {
         }
 }
 
-const interval = setInterval(typingFunction, typingSpeed)
+let interval = setInterval(typingFunction, typingSpeed)
 
 function typeDiv () {
     if (cursorOne) cursorOne.style.display = 'none'
@@ -87,7 +88,7 @@ function typingTypescript () {
         if (finalText === 'textContent') { 
             clearInterval(typescriptInterval) 
             setTimeout(() => { 
-                if (equalElement) equalElement.style.display = 'inline'
+            if (equalElement) equalElement.style.display = 'inline'
             typescriptInterval = setInterval(typescriptTextContentFunction, typingSpeed)
 
             }, typingSpeed)
@@ -142,5 +143,34 @@ function scssSecondTyping () {
     } else {
         if (comma) comma.style.display = 'inline'
         clearInterval(typescriptInterval)
+        setTimeout(outputColorAndResetAutoTyper, transitionSpeed)
     }
+}
+
+function outputColorAndResetAutoTyper () {
+    if (outputContainer) outputContainer.style.backgroundColor = '#9fdfbf'
+
+    setTimeout(() => {
+        interval = setInterval(typingFunction, typingSpeed)
+    if (htmlContainer) htmlContainer.style.display = 'block'
+    if (scssContainer) scssContainer.style.display = 'none'
+    if (outputHeading) outputHeading.textContent = '404'
+    if (outputContainer) outputContainer.style.backgroundColor = '#ffffff'
+    if (divTextElement) divTextElement.style.display = 'none'
+    if (typescriptTextElement) typescriptTextElement.textContent = ''
+    if (dot) dot.style.display = 'none'
+
+    if (colon) colon.style.display = 'none'
+    if (comma) comma.style.display = 'none'
+    if (scssElementOne) scssElementOne.textContent = ''
+    if (scssElementTwo) scssElementTwo.textContent = ''
+
+    if (typescriptTextContent) typescriptTextContent.textContent = ''
+    if (equalElement) equalElement.style.display = 'none'
+    if (tsTextContent) tsTextContent.textContent = ''
+
+
+    finalText = ''
+    index = 0
+    }, transitionSpeed * 3);
 }
