@@ -23,6 +23,9 @@ const comma = document.querySelector<HTMLDivElement>('.comma')
 const outputHeading = document.querySelector<HTMLDivElement>('#output-heading')
 const outputContainer = document.querySelector<HTMLDivElement>('#main-window-output')
 
+//WINDOW NAME element
+const windowName = document.querySelector<HTMLDivElement>('.windowName-input')
+
 const typingSpeed: number = 100
 const transitionSpeed: number = 500
 let typescriptInterval
@@ -69,6 +72,8 @@ function typeDiv () {
 function startTypescript () {
     if (htmlContainer) htmlContainer.style.display = 'none'
     if (typescriptContainer) typescriptContainer.style.display = 'block'
+    if (windowName) windowName.textContent = 'script.ts'
+
     index = 0
     finalText = ''
     setTimeout(() => { typescriptInterval = setInterval(typingTypescript, typingSpeed) }, transitionSpeed);       
@@ -116,6 +121,7 @@ function typescriptTextContentFunction () {
 function scssPrepare () {
     index = 0
     finalText = ''
+    if (windowName) windowName.textContent = 'style.scss'
     if (typescriptContainer) typescriptContainer.style.display = 'none'
     if (scssContainer) scssContainer.style.display = 'block'
     typescriptInterval = setInterval(scssTyping, typingSpeed)
@@ -169,6 +175,7 @@ function outputColorAndResetAutoTyper () {
     if (equalElement) equalElement.style.display = 'none'
     if (tsTextContent) tsTextContent.textContent = ''
 
+    if (windowName) windowName.textContent = 'index.html'
 
     finalText = ''
     index = 0
