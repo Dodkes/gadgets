@@ -1,0 +1,56 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { height: 100%; }
+
+body {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right top, #330537, #46005b, #510085, #4e00b5, #2412eb);
+    perspective: 10em; //makes 3D effect
+}
+
+.grid-container {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    padding: 20px;
+    transform: rotateX(190deg);
+}
+
+.grid-unit {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid black;
+    visibility: hidden;
+}
+
+.grid-unit:hover {
+    opacity: 0.5;
+}
+
+.animated-unit {
+    animation-name: flashing;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+.animated-unit-1 {
+    animation-delay: 0.3s;
+}
+
+.animated-unit-2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes flashing {
+    0%{ box-shadow: 2px 2px 20px 2px white; }
+    10%{ box-shadow: none; }
+}
