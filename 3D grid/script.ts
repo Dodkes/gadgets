@@ -7,9 +7,10 @@ $(function() {
     for (let x = 1; x < iteration; x++) {
         setTimeout(() => { showTiles(`.unit-${x}`) }, delay());
     }
+    setTimeout(() => {
+        show3dHeading()
+    }, 2500);
 });
-
-console.log(document.querySelector(`.unit-${iteration}`))
 
 function showTiles (id: string) {
     $(id).css('visibility', 'visible')
@@ -17,4 +18,11 @@ function showTiles (id: string) {
 
 function delay () {
     return time = time + differenceTime
+}
+
+function show3dHeading () {
+    $(".heading-container").animate({
+        width: '90%',
+        opacity: '1'
+    }, 2000)
 }
