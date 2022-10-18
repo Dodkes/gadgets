@@ -1,0 +1,47 @@
+$bodyColor: #0a0a0f;
+$bigBubbleSize: 80px;
+$mediumBubbleSize: 50px;
+$smallBubbleSize: 20px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: $bodyColor;
+}
+
+#circle-container {
+    width: 100%;
+    height: 100%;
+}
+
+.big-bubble, .medium-bubble , .small-bubble {
+    background-color: transparent;
+    border: 1px solid white;
+    box-shadow: 0 0 5px white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 100px;
+}
+
+.big-bubble {
+    width: $bigBubbleSize;
+    height: $bigBubbleSize;
+}
+
+.medium-bubble {
+    width: $mediumBubbleSize;
+    height: $mediumBubbleSize;
+}
+
+.small-bubble {
+    width: $smallBubbleSize;
+    height: $smallBubbleSize;
+}
