@@ -34,22 +34,31 @@ html, body {
     animation-name: moving;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-
-
 }
 
 @keyframes moving {
     0% {top: 50%}
-    10% {top: 70%}
-    30% {
-        opacity: 0.1;
+    25% {
         top: 70%;
         font-size: 1.5vw;
-        color: white;
+        opacity: 0.5;
+    }
+
+    50% {
         top: 50%;
+        opacity: 0.2;
         font-size: 1vw;
     }
-    45% {
+
+    75% {
         top: 30%;
+        font-size: 1.5vw;
+        opacity: 0.5;
+    }
+
+    100% {
+        top: 50%;
+        opacity: 1;
+        font-size: 2vw;
     }
 }
