@@ -1,14 +1,16 @@
-const skillsContainer = document.querySelector<HTMLDivElement>('.skills-container')
-const skill = document.querySelector<HTMLDivElement>('.skill')
+const myTechnologies: string [] = ['.typescript', '.html', '.css', '.scss', '.bootstrap', '.jquery', '.react', '.github', '.json', '.api', '.es5-es6']
 
-skillsContainer?.addEventListener('mouseenter', () => {
-if (skill){
-    skill.style.color = 'red'
-    skill.style.animationPlayState = 'paused'
-}})
+function showTechnologies () {
+    for (let element of myTechnologies) {
+        $(element).animate({
+            fontSize: '5vw'
+        }, randomSpeed())
+    }
+}
 
-skillsContainer?.addEventListener('mouseout', () => {
-if (skill) {
-    skill.style.color = 'white'
-    skill.style.animationPlayState = 'running'
-}})
+function randomSpeed (): number {
+    return Math.floor(Math.random() * 1000)
+}
+
+//Run script
+showTechnologies ()

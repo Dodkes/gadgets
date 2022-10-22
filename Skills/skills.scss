@@ -1,3 +1,15 @@
+$scssColor: #ff99ff;
+$typescriptColor: #4d88ff;
+$htmlColor: #ff751a;
+$bootstrapColor: #9933ff;
+$jqueryColor: #000066;
+$cssColor: #3366ff;
+$githubColor: #14141f;
+$reactColor: #99e6ff;
+$es6Color: #ffcc00;
+$apiColor: #c2c2d6;
+$jsonColor: #339966;
+
 body {
     background-color: #454545;
 }
@@ -18,128 +30,89 @@ html, body {
     position: relative;
     width: 100%;
     height: 100%;
-    border: 1px solid red;
 }
 
 .skill {
     color: white;
-    text-shadow: 1px 2px 2px black;
-    font-size: 2vw;
+    text-shadow: 5px 5px 5px black;
+    font-size: 0vw;
     max-width: fit-content;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    //animation: moving 5s steps(20);
-    animation-name: moving;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    position: absolute;
+    font-family: 'Oswald', sans-serif;
 }
 
-@keyframes moving {
-    4% {
-        top: 70%; //LONG
-    }
-    8% {
-        top: 72%;
-        font-size: 1.9vw;
-    }
-    12% {
-        top: 74%;
-        font-size: 1.8vw;
-    }
-    16% {
-        top: 76%;
-        font-size: 1.7vw;
-    }
-    20% {
-        top: 78%;
-        font-size: 1.6vw;
-    }
-    24% {
-        top: 80%;
-        font-size: 1.5vw;
-    }
-    28% {
-        font-size: 1.3vw;
-    }
-    32% {
-        top: 78%;
-        font-size: 1.2vw;
-    }
-    36% {
-        top: 76%;
-        font-size: 1.1vw;
-    }
-    40% {
-        top: 74%;
-        font-size: 1vw;
-    }
-    44% {
-        top: 72%;
-        font-size: 0.9vw;
-    }
-    48% {
-        top: 70%;
-        font-size: 0.8vw;
-    }
-    52% {
-        top: 50%; //LONG
-        font-size: 0.4vw;
-    }
-    56% {
-        top: 30%; //LONG
-        font-size: 0.8vw;
-    }
-    60% {
-        top: 28%;
-        font-size: 0.9vw;
+.typescript {
+    top: 0;
+    left: 0;
+    color: $typescriptColor;
+}
 
-    }
-    64% {
-        top: 26%;
-        font-size: 1vw;
+.html {
+    transform: rotate(-90deg) translate(-100%, 0);
+    transform-origin: 0 0;
+    top: 12%;
+    left: 0;
+    color: $htmlColor;
+}
 
-    }
-    68% {
-        top: 24%;
-        font-size: 1.1vw;
+.bootstrap {
+    top: 10%;
+    left: 5%;
+    color: $bootstrapColor;
+}
 
-    }
-    72% {
-        top: 22%;
-        font-size: 1.2vw;
+.scss {
+    top: 0;
+    left: 22%;
+    color: $scssColor;
+}
 
-    }
-    76% {
-        top: 20%;
-        font-size: 1.3vw;
+.jquery {
+    top: 20%;
+    left: 5%;
+    color: $jqueryColor;
+}
 
-    }
-    80% {
-        top: 22%;
-        font-size: 1.5vw;
-    }
-    84% {
-        top: 24%;
-        font-size: 1.6vw;
-    }
-    88% {
-        top: 26%;
-        font-size: 1.7vw;
-    }
-    92% {
-        top: 28%;
-        font-size: 1.8vw;
-    }
-    96% {
-        top: 30%;
-        font-size: 2vw;
-    }
-    100% {
-        top: 50%; //LONG
-        font-size: 3vw;
-    }
+.css {
+    transform: rotate(-90deg) translate(-100%, 0);
+    transform-origin: 0 0;
+    top: 30%;
+    left: 4%;
+    color: $cssColor;
+}
+
+.github {
+    transform: rotate(-90deg) translate(-100%, 0);
+    transform-origin: 0 0;
+    left: 0;
+    top: 40%;
+    color: $githubColor;
+}
+
+.react {
+    transform: rotate(-90deg) translate(-100%, 0);
+    transform-origin: 0 0;
+    top: 48%;
+    left: 4%;
+    color: $reactColor;
+}
+
+.es5-es6 {
+    transform: rotate(-90deg) translate(-100%, 0);
+    transform-origin: 0 0;
+    left: 8%;
+    top: 32%;
+    color: $es6Color;
+}
+
+.json {
+    top: 0;
+    left: 34%;
+    color: $jsonColor;
+}
+
+.api {
+    top: 10%;
+    left: 25%;
+    color: $apiColor;
 }
