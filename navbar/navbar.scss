@@ -1,0 +1,159 @@
+$bodyColor: #1d1d1d;
+$hoverColor: aquamarine;
+$pulseColor: #af2d8f;
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: black;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container {
+    font-family: 'Oswald', sans-serif;
+    background-color: $bodyColor;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+}
+
+li, a {
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    color: $hoverColor;
+}
+
+.menu-button {
+    border-top: 2px solid black;
+    padding: 10px;
+    transition: ease-out 200ms;
+}
+
+.ping-me {
+    border-bottom: 2px solid black;
+}
+
+.ping-me {
+    animation-name: pulse;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 1s;
+}
+
+i {
+    color: black;
+    font-size: 2vw;
+    margin-top: 20px;
+    animation-name: iconsShow;
+    animation-duration: 2s;
+    animation-fill-mode: backwards; //animation stays on 100%
+}
+
+.menu-button-1, .menu-button-2, .menu-button-3, .menu-button-4 {
+    font-size: 1vw;
+    animation-name: menuButtonsShow;
+    animation-duration: 500ms;
+    animation-fill-mode: backwards; //animation stays on 100%
+}
+
+.menu-button-2 {
+    animation-delay: 200ms;
+}
+
+.menu-button-3 {
+    animation-delay: 400ms;
+}
+
+.menu-button-4 {
+    animation-delay: 600ms;
+}
+
+i:hover {
+    transform: rotate(360deg);
+    color: $hoverColor;
+    transition: 0.2s;
+}
+
+#linked-in:active, #facebook:active {
+    color: #4d88ff;
+}
+
+#github:active {
+    color: black;
+}
+
+#linked-in {
+    animation-delay: 200ms;
+}
+
+#github{
+    animation-delay: 300ms;
+}
+
+#facebook {
+    animation-delay: 400ms;
+}
+
+.nav-menu-container {
+    position: relative;
+    top: 30%;
+}
+
+.icons-container {
+    position: relative;
+    top: 50%;
+}
+
+.menu-button:hover {
+    box-shadow: inset 100px 0 0 0 black;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    from {
+        background-color: $bodyColor;
+    }
+
+    to {
+        background-color: $pulseColor;
+    }
+}
+
+@keyframes iconsShow {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 2vw;
+        transform: rotate(360deg);
+        color: black;
+    }
+}
+
+@keyframes menuButtonsShow {
+    0% {
+        font-size: 0;
+        opacity: 0;
+        }
+    80% {
+        font-size: 1.1vw;
+        opacity: 1;
+    }
+
+    100% {
+        font-size: 1vw;
+    }
+}
