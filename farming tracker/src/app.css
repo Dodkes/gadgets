@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(37, 37, 37);
+}
+
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 1vw;
+}
+
+.farming-component {
+    color: white;
+    background-color: black;
+    padding: 1vw;
+    top: 10%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 1vw;
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    color: aqua;
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.plant-button {
+    padding: 0.1em;
+    outline: none;
+    color: white;
+}
+
+button {
+    margin: 0.2em;
+    background-color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
