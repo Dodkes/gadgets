@@ -3,6 +3,7 @@ import papaya from './papaya.png'
 import calquat from './calquat.png'
 import mahogany from './mahogany.png'
 import PlantList from './PlantList'
+import Time from './Time'
 
 export default function FarmingItem() {
 const plantTypeInput = useRef()
@@ -18,7 +19,7 @@ const preSetInput = (plant, h) => {
 const addPlant = () => {
   const plantType = plantTypeInput.current.value
   const growthTime = growthTimeInput.current.value
-  if (plantType === '' || growthTime === '') return
+  if (plantType === '' || growthTime === '' || growthTime <= 0) return
 
   setPlant(prevPlant => {
     return [...prevPlant, {id: Math.random(), name: plantType, grown: false, growthTime: growthTime}] //Znamena ze nase pole ktore mame v usestate zaeviduje a a doplni pomocou spread operatora novy objekt do pola
@@ -31,6 +32,7 @@ const addPlant = () => {
   return (
     <>
     <div className='farming-component'>
+        <Time />
         <label>Farming: </label>
         <input id='plant-type-input' type='text' placeholder='Type of plant' ref={plantTypeInput}/>
         <input id='plant-growth-time-input' type='number' placeholder='Growth time in h' ref={growthTimeInput}/>
@@ -38,12 +40,9 @@ const addPlant = () => {
         <button onClick={()=> preSetInput('Papaya tree', 16)} id='papaya-button'><img src={papaya} alt='papaya tree' width='20' height='20' title='papaya tree'></img></button>
         <button onClick={()=> preSetInput('Calquat tree', 21)} id='calquat-button'><img src={calquat} alt='calquat tree' width='20' height='20' title='calquat tree'></img> </button>
         <button onClick={()=> preSetInput('Mahogany tree', 85)} id='mahogany-button'><img src={mahogany} alt='mahogany tree' width='20' height='20' title='mahogany tree'></img></button>
-        <PlantList plants={plant} test={' second prop'}/>
+        <PlantList plants={plant} test={'date'}/>
     </div>
     </>
   )
 
 }
-
-
-//onClick bude returnovat component, ktory si vytvorime a importneme a posleme donho props

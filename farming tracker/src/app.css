@@ -2,6 +2,11 @@ body {
     background-color: rgb(37, 37, 37);
 }
 
+html {
+    width: 100%;
+    height: 100%;
+}
+
 *{
     padding: 0;
     border: 0;
@@ -16,8 +21,10 @@ body {
     top: 10%;
     left: 50%;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
+    border: 1px solid lightgreen;
     border-radius: 1vw;
+    box-shadow: 2px 2px 5px black;
 }
 
 input {
@@ -52,4 +59,25 @@ button {
 button:hover {
     cursor: pointer;
     opacity: 0.5;
+}
+
+.time {
+    position: relative;
+    top: 0;
+    left: 50%;
+    width: fit-content;
+    transform: translate(-50%, -50%);
+}
+
+.time-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.time-title {
+    color: lightgreen;
 }
