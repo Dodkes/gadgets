@@ -1,7 +1,7 @@
 export default function PlantItem({plant, test}) {
   return (
     <>
-    <div>{plant.name}{test}</div>
+    <div className="item">{plant.name}{test}</div>
     </>
   )
 }

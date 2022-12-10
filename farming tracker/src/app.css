@@ -81,3 +81,8 @@ button:hover {
 .time-title {
     color: lightgreen;
 }
+
+.item {
+    border-bottom: 0.1vw solid lightgreen;
+    margin-top: 2vw;
+}
