@@ -12,7 +12,15 @@ export default function FarmingItem() {
 const plantTypeInput = useRef()
 const growthTimeInput = useRef()
 
-const [plant, setPlant] = useState(JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))) //initial value has to be taken from local storage, but if LS not exists could be problem
+//useState condition if local storage exists -> pass a function to usestate initial value with condition to set conditional useState initial value
+const [plant, setPlant] = useState(
+  ()=> {
+    if (localStorage.getItem(LOCAL_STORAGE_KEY)) {
+      return JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+    }
+    return []
+  }
+) 
 
 //Loading plants from local storage -> loads only on 1st render
 useEffect(()=>{
@@ -22,7 +30,8 @@ useEffect(()=>{
 
 //Saving plants to local storage -> saves each time "plant" changes
 useEffect(()=>{
-  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(plant))
+    console.log(plant)
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(plant))
 }, [plant])
 
 const presetInput = (plant, h) => {
@@ -60,3 +69,6 @@ const addPlant = () => {
   )
 
 }
+
+
+//do useEffect potrebujem nastavit podmienku, pokial local storage existuje
