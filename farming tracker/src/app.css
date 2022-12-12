@@ -92,3 +92,9 @@ button:hover {
     right: 5%;
     color: rgb(248, 134, 134);
 }
+
+.clear-all-button {
+    color: rgb(248, 134, 134);
+    margin: 1vw;
+    position: relative;
+}

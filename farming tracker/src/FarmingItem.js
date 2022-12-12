@@ -30,7 +30,6 @@ useEffect(()=>{
 
 //Saving plants to local storage -> saves each time "plant" changes
 useEffect(()=>{
-    console.log(plant)
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(plant))
 }, [plant])
 
@@ -63,7 +62,9 @@ const addPlant = () => {
         <button onClick={()=> presetInput('Papaya tree', 16)} id='papaya-button'><img src={papaya} alt='papaya tree' width='20' height='20' title='papaya tree'></img></button>
         <button onClick={()=> presetInput('Calquat tree', 21)} id='calquat-button'><img src={calquat} alt='calquat tree' width='20' height='20' title='calquat tree'></img> </button>
         <button onClick={()=> presetInput('Mahogany tree', 85)} id='mahogany-button'><img src={mahogany} alt='mahogany tree' width='20' height='20' title='mahogany tree'></img></button>
-        <PlantList plants={plant} test={' -TEST'}/>
+        <PlantList plants={plant} />
+        <br/>
+        <button className='clear-all-button' onClick={()=> {setPlant([])}}>Clear all</button>
     </div>
     </>
   )
