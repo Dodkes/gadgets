@@ -98,3 +98,7 @@ button:hover {
     margin: 1vw;
     position: relative;
 }
+
+.left-time {
+    color: grey;
+}

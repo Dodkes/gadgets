@@ -1,15 +1,7 @@
-import { useEffect, useState } from "react"
 
 const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
-export default function Time() {
-    const [time, setTime] = useState(new Date())
-
-    useEffect(()=> { //useEffect calls setTimeout on each render, which means setTimeout works as setInterval
-      setTimeout(()=>{
-        setTime(new Date())
-      }, 1000)
-    }, [time]) //each time that "time" changes useEffect is executed
+export default function Time({time}) {
 
   function getMonthName () {
     return monthNames[time.getMonth()]

@@ -5,7 +5,6 @@ import mahogany from './mahogany.png'
 import PlantList from './PlantList'
 import Time from './Time'
 
-
 const LOCAL_STORAGE_KEY = 'plants'
 
 export default function FarmingItem() {
@@ -43,18 +42,30 @@ const addPlant = () => {
   const growthTime = growthTimeInput.current.value
   if (plantType === '' || growthTime === '' || growthTime <= 0) return
 
+
+  const date = new Date()
+
   setPlant(prevPlant => {
-    return [...prevPlant, {id: Math.random(), name: plantType, grown: false, growthTime: growthTime, plantedTime: new Date()}] //Znamena ze nase pole ktore mame v usestate zaeviduje a a doplni pomocou spread operatora novy objekt do pola
+    return [...prevPlant, {id: Math.random(), name: plantType, grown: false, growthTime: growthTime, plantedTime: {year: date.getFullYear(), month: date.getMonth(), day: date.getDate(), hour: date.getHours(), minute: date.getMinutes()}}] //Znamena ze nase pole ktore mame v usestate zaeviduje a a doplni pomocou spread operatora novy objekt do pola
   })
 
   plantTypeInput.current.value = null 
   growthTimeInput.current.value = null
 }
 
+// CLOCK
+const [time, setTime] = useState(new Date())
+
+useEffect(()=> { //useEffect calls setTimeout on each render, which means setTimeout works as setInterval
+  setTimeout(()=>{
+    setTime(new Date())
+  }, 1000)
+}, [time]) //each time that "time" changes useEffect is executed
+
   return (
     <>
     <div className='farming-component'>
-        <Time />
+        <Time time={time}/>
         <label>Farming: </label>
         <input id='plant-type-input' type='text' placeholder='Type of plant' ref={plantTypeInput}/>
         <input id='plant-growth-time-input' type='number' placeholder='Growth time in h' ref={growthTimeInput}/>
@@ -62,14 +73,11 @@ const addPlant = () => {
         <button onClick={()=> presetInput('Papaya tree', 16)} id='papaya-button'><img src={papaya} alt='papaya tree' width='20' height='20' title='papaya tree'></img></button>
         <button onClick={()=> presetInput('Calquat tree', 21)} id='calquat-button'><img src={calquat} alt='calquat tree' width='20' height='20' title='calquat tree'></img> </button>
         <button onClick={()=> presetInput('Mahogany tree', 85)} id='mahogany-button'><img src={mahogany} alt='mahogany tree' width='20' height='20' title='mahogany tree'></img></button>
-        <PlantList plants={plant} />
+        <PlantList plant={plant} updatePlant={setPlant} time={time}/>
         <br/>
-        <button className='clear-all-button' onClick={()=> {setPlant([])}}>Clear all</button>
+        <button className='clear-all-button' onClick={()=> setPlant([])}>Clear all</button>
     </div>
     </>
   )
 
 }
-
-
-//do useEffect potrebujem nastavit podmienku, pokial local storage existuje
